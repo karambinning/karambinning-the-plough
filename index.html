@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Plough — Leverstock Green · Hemel Hempstead</title>
+<meta name="description" content="Tucked away in the serene surroundings of Leverstock Green, The Plough is a Hemel Hempstead village pub with a seven-day carvery, à la carte menu, Pie Tuesdays, Summer Sessions and a Diamond Club for over-50s.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f1e5;
+  --paper-warm:#fbf7ea;
+  --ink:#1b1714;
+  --rule:#cdbf9f;
+  --oxblood:#7d2129;
+  --oxblood-deep:#661b21;
+  --navy:#202c52;
+  --navy-soft:#2c3a66;
+  --display:"Fraunces","Source Serif 4",Georgia,serif;
+  --body:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --measure:62ch;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(1rem,.55rem + .9vw,1.125rem);
+  line-height:1.55;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"liga","kern","onum";
+}
+/* paper grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.42  0 0 0 0 0.30  0 0 0 0 0.16  0 0 0 0.13 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity:.35;mix-blend-mode:multiply;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--oxblood);color:var(--paper)}
+
+/* layout */
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.1rem,3vw,2.5rem);position:relative;z-index:2}
+hr.rule{border:0;border-top:1px solid var(--rule);margin:0}
+hr.rule.thick{border-top:3px double var(--oxblood);margin:.4rem 0}
+
+/* top bar */
+.topbar{
+  background:var(--navy);color:var(--paper);
+  font-family:var(--body);font-size:.82rem;letter-spacing:.04em;
+}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding-block:.55rem;align-items:center;justify-content:space-between}
+.topbar a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar a:hover{border-bottom-color:var(--paper)}
+.topbar .pill{
+  background:var(--oxblood);color:var(--paper);
+  padding:.2rem .55rem;border-radius:1px;
+  font-variant-caps:all-small-caps;letter-spacing:.16em;font-weight:600;font-size:.78rem;
+}
+
+/* masthead */
+.masthead{padding-block:clamp(2.2rem,5vw,3.6rem) clamp(1.6rem,3vw,2.2rem)}
+.masthead .meta-row{
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.6rem 2rem;
+  font-family:var(--body);font-size:.82rem;color:#5b4a36;
+  text-transform:uppercase;letter-spacing:.22em;
+}
+.masthead .meta-row .left{display:flex;gap:1.4rem;flex-wrap:wrap}
+.masthead h1.nameplate{
+  font-family:var(--display);
+  font-weight:800;font-style:normal;
+  font-variation-settings:"opsz" 144;
+  font-size:clamp(3.6rem,12.5vw,11.5rem);
+  line-height:.86;letter-spacing:-.025em;
+  margin:.45rem 0 .25rem;
+  color:var(--oxblood);
+  text-wrap:balance;
+}
+.masthead h1.nameplate span.amp{
+  font-style:italic;font-weight:600;color:var(--navy);
+  font-variation-settings:"opsz" 144;
+}
+.masthead .tagline{
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-variation-settings:"opsz" 36;
+  font-size:clamp(1.1rem,1.8vw + .4rem,1.65rem);
+  color:var(--navy);max-width:38ch;margin-block:.3rem 0;
+  text-wrap:balance;line-height:1.25;
+}
+
+/* nav */
+nav.primary{
+  display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;
+  padding-block:.9rem;border-top:1px solid var(--rule);border-bottom:3px double var(--oxblood);
+  font-family:var(--body);font-size:.92rem;letter-spacing:.02em;
+}
+nav.primary a{
+  text-decoration:none;color:var(--ink);padding:.15rem 0;
+  border-bottom:1px solid transparent;transition:color .18s,border-color .18s;
+}
+nav.primary a:hover{color:var(--oxblood);border-bottom-color:var(--oxblood)}
+nav.primary .spacer{flex:1}
+nav.primary .book{
+  background:var(--oxblood);color:var(--paper);padding:.45rem 1rem;
+  font-variant-caps:all-small-caps;letter-spacing:.18em;font-weight:600;
+  text-decoration:none;border:0;
+  transition:background .2s;
+}
+nav.primary .book:hover{background:var(--oxblood-deep);border-color:transparent}
+
+/* marquee */
+.marquee{
+  overflow:hidden;background:var(--paper-warm);
+  border-block:1px solid var(--rule);
+  padding-block:.65rem;margin-top:0;
+  --speed:42s;
+}
+.marquee__track{
+  display:inline-flex;gap:2.4rem;white-space:nowrap;
+  animation:scroll var(--speed) linear infinite;
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-variation-settings:"opsz" 24;
+  font-size:1.05rem;color:var(--navy);
+}
+.marquee__track strong{color:var(--oxblood);font-style:normal;font-weight:600;letter-spacing:.04em}
+.marquee__track .dot{color:var(--rule)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}}
+
+/* sections */
+section{padding-block:clamp(2.6rem,5vw,4.2rem)}
+.section-label{
+  font-family:var(--body);font-size:.78rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--oxblood);font-weight:600;
+  margin:0 0 .9rem;
+}
+.h-display{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 96;
+  font-size:clamp(2rem,3.4vw + .8rem,3.6rem);
+  line-height:1;letter-spacing:-.018em;color:var(--ink);
+  text-wrap:balance;margin:0;
+}
+.h-display em{font-style:italic;color:var(--oxblood);font-weight:400}
+
+/* welcome editorial */
+.welcome{
+  display:grid;grid-template-columns:1fr;gap:1.4rem clamp(2rem,4vw,4rem);
+}
+@media (min-width:62rem){
+  .welcome{grid-template-columns:1fr 1.4fr}
+}
+.welcome .lede{
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-variation-settings:"opsz" 48;
+  font-size:clamp(1.4rem,1.4vw + .8rem,2.1rem);
+  line-height:1.18;color:var(--navy);
+  text-wrap:balance;margin:0;
+}
+.welcome .body{max-width:var(--measure)}
+.welcome .body p{margin:0 0 1rem}
+.welcome .body p:first-child::first-letter{
+  font-family:var(--display);font-weight:800;
+  font-variation-settings:"opsz" 144;
+  float:left;font-size:4.4rem;line-height:.85;
+  padding:.45rem .6rem 0 0;color:var(--oxblood);
+}
+
+/* coloured slab */
+.slab{
+  background:var(--oxblood);color:var(--paper);
+  margin-top:clamp(2rem,4vw,3rem);
+}
+.slab a{color:var(--paper-warm)}
+.slab .h-display{color:var(--paper)}
+.slab .h-display em{color:var(--paper);opacity:.85}
+.slab .section-label{color:var(--paper-warm);opacity:.78}
+.slab hr.rule{border-color:rgba(245,241,229,.25)}
+.slab .lede{color:var(--paper)}
+
+/* carvery feature */
+.carvery{
+  display:grid;grid-template-columns:1fr;gap:1.4rem clamp(2rem,4vw,4rem);
+}
+@media (min-width:62rem){
+  .carvery{grid-template-columns:1fr 1.1fr;align-items:start}
+}
+.carvery .body p{margin:0 0 1rem;max-width:var(--measure)}
+.carvery .strap{
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-variation-settings:"opsz" 36;
+  font-size:1.35rem;line-height:1.25;margin:0 0 1.1rem;
+  opacity:.92;
+}
+.carvery .timetable{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 36;
+  border-top:1px solid rgba(245,241,229,.35);
+  border-bottom:1px solid rgba(245,241,229,.35);
+  padding-block:1rem;margin-block:1.6rem;
+}
+.carvery .timetable dl{
+  display:grid;grid-template-columns:auto 1fr;gap:.25rem 1.4rem;margin:0;font-size:1.05rem;
+}
+.carvery .timetable dt{font-variant-caps:all-small-caps;letter-spacing:.14em;opacity:.85;font-weight:600;font-family:var(--body);font-size:.92rem;align-self:center}
+.carvery .timetable dd{margin:0;text-align:right}
+.carvery .timetable .note{
+  display:block;margin-top:.9rem;font-family:var(--body);
+  font-style:italic;font-size:.92rem;opacity:.8;text-align:left;letter-spacing:0;font-weight:400;
+}
+
+/* week */
+.week{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:2rem}
+@media (min-width:48rem){.week{grid-template-columns:repeat(3,1fr)}}
+.entry{
+  border-top:3px double var(--oxblood);padding-top:1rem;
+}
+.entry .day{
+  font-family:var(--body);font-variant-caps:all-small-caps;font-weight:600;
+  letter-spacing:.2em;color:var(--oxblood);font-size:.82rem;margin:0 0 .35rem;
+}
+.entry h3{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 48;
+  font-size:clamp(1.3rem,1vw + 1rem,1.7rem);line-height:1.1;margin:0 0 .6rem;
+  letter-spacing:-.01em;
+}
+.entry h3 em{font-style:italic;color:var(--oxblood);font-weight:400}
+.entry p{margin:0;max-width:42ch}
+
+/* card pair (diamond + private) */
+.cards{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:1.5rem}
+@media (min-width:54rem){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--paper-warm);
+  border:1px solid var(--rule);
+  padding:clamp(1.4rem,2.2vw + .4rem,2.2rem);
+  position:relative;
+}
+.card .kicker{
+  font-family:var(--body);font-variant-caps:all-small-caps;letter-spacing:.22em;
+  color:var(--oxblood);font-weight:600;font-size:.78rem;margin:0 0 .65rem;
+}
+.card h3{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 60;
+  font-size:clamp(1.7rem,1.4vw + 1rem,2.2rem);line-height:1.05;margin:0 0 .8rem;
+  color:var(--ink);letter-spacing:-.01em;
+}
+.card h3 em{font-style:italic;color:var(--oxblood);font-weight:400}
+.card ul{list-style:none;padding:0;margin:.9rem 0 0;border-top:1px solid var(--rule)}
+.card ul li{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.55rem 0;border-bottom:1px dotted var(--rule);
+  font-size:.96rem;
+}
+.card ul li span:last-child{color:var(--oxblood);font-weight:600;text-align:right}
+.card p{margin:0 0 .8rem;max-width:48ch}
+
+/* visit / footer-as-letterhead */
+.visit{
+  background:var(--navy);color:var(--paper);
+  padding-block:clamp(2.8rem,5vw,4.4rem);
+}
+.visit .grid{display:grid;grid-template-columns:1fr;gap:2rem clamp(2rem,4vw,4rem);align-items:start}
+@media (min-width:62rem){.visit .grid{grid-template-columns:1.2fr 1fr 1fr}}
+.visit h2{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 144;
+  font-size:clamp(2.4rem,5vw,4.4rem);
+  line-height:.92;letter-spacing:-.02em;
+  color:var(--paper);margin:0 0 .6rem;
+}
+.visit h2 em{font-style:italic;color:#e1b8b8;font-weight:400}
+.visit .addr-block{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 36;
+  font-size:1.2rem;line-height:1.4;color:var(--paper);
+}
+.visit .addr-block .label{
+  display:block;font-family:var(--body);font-variant-caps:all-small-caps;
+  letter-spacing:.22em;font-size:.72rem;color:#c8d2e6;font-weight:600;
+  margin:0 0 .35rem;
+}
+.visit a.tel{
+  font-family:var(--display);font-weight:600;
+  font-variation-settings:"opsz" 144;
+  font-size:clamp(1.8rem,3vw + .6rem,2.6rem);
+  text-decoration:none;color:var(--paper);
+  border-bottom:2px solid #e1b8b8;
+  display:inline-block;letter-spacing:-.015em;
+  transition:color .2s,border-color .2s;
+}
+.visit a.tel:hover{color:#e1b8b8;border-color:var(--paper)}
+.visit a.email{
+  font-family:var(--display);font-style:italic;font-size:1.15rem;
+  text-decoration:none;color:var(--paper);
+  border-bottom:1px solid #b6c0d6;
+  transition:color .2s;display:inline-block;line-height:1.3;
+}
+.visit a.email:hover{color:#e1b8b8}
+.visit dl.hours{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.2rem;font-family:var(--display);font-variation-settings:"opsz" 24;font-size:1rem}
+.visit dl.hours dt{font-variant-caps:all-small-caps;letter-spacing:.18em;font-family:var(--body);font-weight:600;font-size:.82rem;color:#c8d2e6}
+.visit dl.hours dd{margin:0;text-align:right;color:var(--paper)}
+.visit dl.hours dd.weekend{color:#e1b8b8}
+
+footer.colophon{
+  background:var(--navy-soft);color:#cdd5e9;
+  padding-block:1.4rem;font-size:.78rem;letter-spacing:.05em;
+}
+footer.colophon .wrap{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;justify-content:space-between}
+footer.colophon a{color:#cdd5e9;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+footer.colophon a:hover{border-bottom-color:#cdd5e9}
+
+/* scroll reveal */
+@supports (animation-timeline: view()){
+  .reveal{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 5% cover 28%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(1.4rem)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none}}
+
+/* small viewport tweaks */
+@media (max-width:42rem){
+  .topbar .wrap{justify-content:flex-start}
+  nav.primary{font-size:.86rem}
+  .masthead h1.nameplate{letter-spacing:-.035em}
+  .visit a.tel{font-size:2.1rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="pill">Open today</span> &nbsp;Carvery served seven days a week</span>
+    <span><a href="tel:01442732132">01442 732132</a> &nbsp;·&nbsp; <a href="mailto:theplough@greatbritishinn.co.uk">theplough@greatbritishinn.co.uk</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="meta-row">
+      <div class="left">
+        <span>Vol. I · Leverstock Green</span>
+        <span>Hemel Hempstead · HP3 8PR</span>
+      </div>
+      <div>Village Pub &amp; Carvery</div>
+    </div>
+    <hr class="rule thick">
+    <h1 class="nameplate">The&nbsp;Plough</h1>
+    <hr class="rule">
+    <p class="tagline">Tucked away in the serene surroundings of Leverstock Green — a village pub, and what a gem.</p>
+    <nav class="primary" aria-label="Primary">
+      <a href="#welcome">Welcome</a>
+      <a href="#carvery">Carvery</a>
+      <a href="#week">The Week</a>
+      <a href="#diamond">Diamond Club</a>
+      <a href="#events">Private Events</a>
+      <a href="#visit">Visit</a>
+      <span class="spacer"></span>
+      <a href="tel:01442732132" class="book">Book · 01442 732132</a>
+    </nav>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span><strong>Sunday Carvery</strong> served from noon</span><span class="dot">◆</span>
+    <span><strong>Pie Tuesday</strong> — pie, mash and a house drink</span><span class="dot">◆</span>
+    <span><strong>Summer Sessions</strong> live entertainment, Saturdays</span><span class="dot">◆</span>
+    <span><strong>Diamond Club</strong> — 20% off weekdays, ages 50+</span><span class="dot">◆</span>
+    <span><strong>Father&rsquo;s Day Menu</strong> — 21 June 2026</span><span class="dot">◆</span>
+    <span><strong>Sunday Carvery</strong> served from noon</span><span class="dot">◆</span>
+    <span><strong>Pie Tuesday</strong> — pie, mash and a house drink</span><span class="dot">◆</span>
+    <span><strong>Summer Sessions</strong> live entertainment, Saturdays</span><span class="dot">◆</span>
+    <span><strong>Diamond Club</strong> — 20% off weekdays, ages 50+</span><span class="dot">◆</span>
+    <span><strong>Father&rsquo;s Day Menu</strong> — 21 June 2026</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section id="welcome" class="reveal">
+  <div class="wrap">
+    <p class="section-label">№ I · Welcome</p>
+    <div class="welcome">
+      <p class="lede">A charming village pub on the edge of Hemel Hempstead, serving a full à la carte alongside a gold-standard carvery.</p>
+      <div class="body">
+        <p>Beer-battered fish &amp; chips. British beef burgers, ground in-house. Homemade pies from the kitchen, dressed with proper gravy. Our menu sticks to classics done well, with ingredients sourced from family farms and butchers we know by name.</p>
+        <p>There is room outside for long Sundays in the sun and room inside for birthdays, christenings, baby showers and quieter celebrations of life. We do not over-think it — fresh food, generous portions, and a warm welcome at the door.</p>
+        <p>Whether you are calling in for a Tuesday pie or settling in for a Saturday with friends, we are pleased you found us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="carvery" class="slab reveal">
+  <div class="wrap">
+    <p class="section-label">№ II · The Carvery</p>
+    <div class="carvery">
+      <div>
+        <h2 class="h-display">A proper carvery, <em>seven days a week.</em></h2>
+        <p class="strap">Crisp roasties, giant homemade Yorkshires, all the trimmings — and gravy poured generously.</p>
+      </div>
+      <div class="body">
+        <p>Our carvery is what we are best known for. The meats are cooked through the morning and carved to order; the sides are made fresh and topped up all day. Sundays bring out the full table — Mondays through Saturdays we keep the same standards, only quieter.</p>
+        <div class="timetable" aria-label="Carvery service">
+          <dl>
+            <dt>Mon – Thu</dt><dd>From 12:00 until 21:30</dd>
+            <dt>Fri – Sat</dt><dd>From 12:00 until 22:30</dd>
+            <dt>Sunday</dt><dd>From 12:00 until 21:00</dd>
+          </dl>
+          <span class="note">Booking is encouraged for Sunday service — please call 01442 732132.</span>
+        </div>
+        <p style="margin-bottom:0"><a href="#visit" style="color:var(--paper-warm);border-bottom:1px solid var(--paper-warm);text-decoration:none;padding-bottom:1px">Find us &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="week" class="reveal">
+  <div class="wrap">
+    <p class="section-label">№ III · The Week, In Brief</p>
+    <h2 class="h-display">A few standing arrangements, <em>weekly.</em></h2>
+    <div class="week">
+      <article class="entry">
+        <p class="day">Every Tuesday</p>
+        <h3>Pie <em>Tuesday</em></h3>
+        <p>One of our homemade pies, your choice of chips or creamy mash, paired with a house lager, a glass of house wine, or a soft drink. The right way to spend a Tuesday.</p>
+      </article>
+      <article class="entry">
+        <p class="day">Every Saturday</p>
+        <h3>Summer <em>Sessions</em></h3>
+        <p>Live entertainment, food and drinks running through the weekend. Gather a few friends — there is no better way to round off a Saturday at The Plough.</p>
+      </article>
+      <article class="entry">
+        <p class="day">Every Sunday</p>
+        <h3>Sunday <em>Carvery</em></h3>
+        <p>Sundays done the right way. A proper British carvery: perfectly cooked meats carved just right, with all the trimmings, sides and gravy you know and love.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="diamond" class="reveal" style="padding-top:0">
+  <div class="wrap">
+    <hr class="rule thick" style="margin-bottom:2rem">
+    <div class="cards">
+      <article class="card">
+        <p class="kicker">№ IV · The Diamond Club</p>
+        <h3>Twenty per cent off, <em>weekdays.</em></h3>
+        <p>Aged 50 or over? Become a Diamond Club member and unlock perks built around the quieter weekday rhythm of the pub.</p>
+        <ul>
+          <li><span>Off your food bill, Mon &ndash; Fri</span><span>20%</span></li>
+          <li><span>Exclusive Light Bites menu</span><span>members</span></li>
+          <li><span>Served weekdays</span><span>12 – 4 PM</span></li>
+        </ul>
+      </article>
+      <article id="events" class="card">
+        <p class="kicker">№ V · Private Events</p>
+        <h3>For the moments <em>worth gathering for.</em></h3>
+        <p>The Plough hosts birthdays, christenings, baby showers and celebrations of life. Quintessentially British inside, with proper outdoor space for warmer days.</p>
+        <p style="margin-top:1rem"><a href="tel:01442732132" style="color:var(--oxblood);border-bottom:2px solid var(--oxblood);text-decoration:none;font-weight:600;padding-bottom:1px">Speak to the team &mdash; 01442 732132</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <p class="section-label" style="color:#e1b8b8">№ VI · Find Us</p>
+    <h2>Leverstock <em>Green.</em></h2>
+    <div class="grid" style="margin-top:2rem">
+      <div class="addr-block reveal">
+        <span class="label">The House</span>
+        The Plough<br>
+        Leverstock Green Road<br>
+        Hemel Hempstead<br>
+        Hertfordshire &nbsp;HP3 8PR
+        <p style="margin:1.4rem 0 0">
+          <a class="tel" href="tel:01442732132">01442&nbsp;732132</a>
+        </p>
+        <p style="margin:.9rem 0 0">
+          <a class="email" href="mailto:theplough@greatbritishinn.co.uk">theplough@greatbritishinn.co.uk</a>
+        </p>
+      </div>
+      <div class="addr-block reveal">
+        <span class="label">The Week</span>
+        <dl class="hours">
+          <dt>Mon</dt><dd>12:00 – 21:30</dd>
+          <dt>Tue</dt><dd>12:00 – 21:30</dd>
+          <dt>Wed</dt><dd>12:00 – 21:30</dd>
+          <dt>Thu</dt><dd>12:00 – 21:30</dd>
+          <dt>Fri</dt><dd class="weekend">12:00 – 22:30</dd>
+          <dt>Sat</dt><dd class="weekend">12:00 – 22:30</dd>
+          <dt>Sun</dt><dd class="weekend">12:00 – 21:00</dd>
+        </dl>
+      </div>
+      <div class="addr-block reveal">
+        <span class="label">Notes</span>
+        <p style="margin:0 0 1rem;font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.4">
+          Please notify our team of any allergens or dietary requirements when booking, or on arrival, before ordering.
+        </p>
+        <p style="margin:0;font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.4">
+          Booking is recommended for Sunday service and for parties of six or more.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="wrap">
+    <span>The Plough · Leverstock Green Road, Hemel Hempstead, HP3 8PR</span>
+    <span><a href="tel:01442732132">01442 732132</a> · <a href="mailto:theplough@greatbritishinn.co.uk">theplough@greatbritishinn.co.uk</a></span>
+    <span>&copy; 2026 The Plough, Hemel Hempstead</span>
+  </div>
+</footer>
+
+</body>
+</html>
